@@ -37,7 +37,7 @@ function Dashboard() {
       <div className="flex items-end justify-between border-b border-border/40 pb-6">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-primary mb-2">{today}</p>
-          <h1 className="font-display text-4xl md:text-5xl">Bom dia, André</h1>
+          <h1 className="font-display text-4xl md:text-5xl">Bom dia</h1>
         </div>
         <div className="hidden md:flex gap-2">
           {["Hoje", "Semana", "Mês", "Ano"].map((p, i) => (
