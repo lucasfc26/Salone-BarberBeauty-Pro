@@ -14,8 +14,8 @@ export function SiteHeader() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 glass border-b border-border/50">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="font-display text-2xl text-primary tracking-tight">
-          Salone
+        <Link to="/" className="font-display text-2xl text-white tracking-tight">
+          SALONE
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {nav.map((n) => (
@@ -50,13 +50,29 @@ export function SiteHeader() {
       {open && (
         <div className="md:hidden border-t border-border/50 bg-background/95 px-6 py-4 space-y-3">
           {nav.map((n) => (
-            <Link key={n.to} to={n.to} onClick={() => setOpen(false)}
-              className="block text-sm uppercase tracking-widest text-muted-foreground hover:text-primary">
+            <Link
+              key={n.to}
+              to={n.to}
+              onClick={() => setOpen(false)}
+              className="block text-sm uppercase tracking-widest text-muted-foreground hover:text-primary"
+            >
               {n.label}
             </Link>
           ))}
-          <Link to="/admin" onClick={() => setOpen(false)} className="block text-sm uppercase tracking-widest text-muted-foreground">Admin</Link>
-          <Link to="/agendar" onClick={() => setOpen(false)} className="block text-center bg-primary text-primary-foreground py-2.5 rounded-md uppercase text-xs tracking-widest font-semibold">Agendar Horário</Link>
+          <Link
+            to="/admin"
+            onClick={() => setOpen(false)}
+            className="block text-sm uppercase tracking-widest text-muted-foreground"
+          >
+            Admin
+          </Link>
+          <Link
+            to="/agendar"
+            onClick={() => setOpen(false)}
+            className="block text-center bg-primary text-primary-foreground py-2.5 rounded-md uppercase text-xs tracking-widest font-semibold"
+          >
+            Agendar Horário
+          </Link>
         </div>
       )}
     </header>
