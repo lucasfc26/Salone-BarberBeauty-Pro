@@ -27,17 +27,24 @@ const upcoming = [
 ];
 
 function Dashboard() {
-  const today = new Date().toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
+  const today = new Date().toLocaleDateString("pt-BR", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  });
   return (
     <div className="space-y-8">
       <div className="flex items-end justify-between border-b border-border/40 pb-6">
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-primary mb-2">{today}</p>
-          <h1 className="font-display text-4xl md:text-5xl">Bom dia, Julian.</h1>
+          <h1 className="font-display text-4xl md:text-5xl">Bom dia, André</h1>
         </div>
         <div className="hidden md:flex gap-2">
           {["Hoje", "Semana", "Mês", "Ano"].map((p, i) => (
-            <button key={p} className={`px-3 py-1.5 text-xs uppercase tracking-widest rounded-md ${i === 2 ? "bg-primary text-primary-foreground" : "hairline hover:border-primary"}`}>
+            <button
+              key={p}
+              className={`px-3 py-1.5 text-xs uppercase tracking-widest rounded-md ${i === 2 ? "bg-primary text-primary-foreground" : "hairline hover:border-primary"}`}
+            >
               {p}
             </button>
           ))}
@@ -46,21 +53,33 @@ function Dashboard() {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {kpis.map((k) => (
-          <div key={k.label} className="glass rounded-xl p-6 hover:border-primary/40 transition group relative overflow-hidden">
+          <div
+            key={k.label}
+            className="glass rounded-xl p-6 hover:border-primary/40 transition group relative overflow-hidden"
+          >
             <div className="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-gold-soft opacity-0 group-hover:opacity-100 transition" />
             <div className="relative flex justify-between items-start mb-3">
-              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{k.label}</p>
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                {k.label}
+              </p>
               <k.icon className="w-4 h-4 text-primary opacity-60" />
             </div>
             <div className="relative flex items-baseline gap-3">
               <span className="font-display text-3xl">{k.value}</span>
-              <span className={`text-xs flex items-center gap-1 ${k.up ? "text-emerald-400" : "text-rose-400"}`}>
-                {k.up ? <ArrowUp className="w-3 h-3" /> : <ArrowDown className="w-3 h-3" />}{k.delta}
+              <span
+                className={`text-xs flex items-center gap-1 ${k.up ? "text-emerald-400" : "text-rose-400"}`}
+              >
+                {k.up ? <ArrowUp className="w-3 h-3" /> : <ArrowDown className="w-3 h-3" />}
+                {k.delta}
               </span>
             </div>
             <div className="mt-4 flex items-end gap-1 h-8">
               {[40, 65, 50, 80, 60, 90, 75].map((h, i) => (
-                <div key={i} className="flex-1 rounded-t bg-primary/30 group-hover:bg-primary/60 transition" style={{ height: `${h}%` }} />
+                <div
+                  key={i}
+                  className="flex-1 rounded-t bg-primary/30 group-hover:bg-primary/60 transition"
+                  style={{ height: `${h}%` }}
+                />
               ))}
             </div>
           </div>
@@ -74,7 +93,10 @@ function Dashboard() {
             <h3 className="font-display text-2xl">Crescimento de Receita</h3>
             <div className="flex gap-2">
               {["1S", "1M", "1A"].map((p, i) => (
-                <button key={p} className={`px-3 py-1 text-[10px] uppercase tracking-widest rounded ${i === 1 ? "bg-primary text-primary-foreground" : "hairline"}`}>
+                <button
+                  key={p}
+                  className={`px-3 py-1 text-[10px] uppercase tracking-widest rounded ${i === 1 ? "bg-primary text-primary-foreground" : "hairline"}`}
+                >
                   {p}
                 </button>
               ))}
@@ -90,10 +112,16 @@ function Dashboard() {
               { v: 80, l: "S6", val: "R$ 51k" },
             ].map((b) => (
               <div key={b.l} className="flex-1 flex flex-col items-center gap-2 group">
-                <div className="opacity-0 group-hover:opacity-100 transition text-xs font-medium text-primary">{b.val}</div>
-                <div className={`w-full rounded-t transition ${b.active ? "gradient-gold shadow-gold" : "bg-surface-elevated hairline group-hover:bg-primary/30"}`}
-                  style={{ height: `${b.v}%` }} />
-                <span className="text-[10px] uppercase tracking-widest text-muted-foreground">{b.l}</span>
+                <div className="opacity-0 group-hover:opacity-100 transition text-xs font-medium text-primary">
+                  {b.val}
+                </div>
+                <div
+                  className={`w-full rounded-t transition ${b.active ? "gradient-gold shadow-gold" : "bg-surface-elevated hairline group-hover:bg-primary/30"}`}
+                  style={{ height: `${b.v}%` }}
+                />
+                <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                  {b.l}
+                </span>
               </div>
             ))}
           </div>
@@ -112,7 +140,9 @@ function Dashboard() {
                 <div className="h-1 bg-surface-elevated rounded-full overflow-hidden">
                   <div className="h-full gradient-gold" style={{ width: `${s.pct}%` }} />
                 </div>
-                <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-1">{s.n} agendamentos</p>
+                <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
+                  {s.n} agendamentos
+                </p>
               </div>
             ))}
           </div>
@@ -123,7 +153,9 @@ function Dashboard() {
       <div className="glass rounded-xl p-6">
         <div className="flex justify-between items-center mb-6">
           <h3 className="font-display text-2xl">Próximos agendamentos</h3>
-          <button className="text-xs uppercase tracking-widest text-primary hover:underline">Ver agenda</button>
+          <button className="text-xs uppercase tracking-widest text-primary hover:underline">
+            Ver agenda
+          </button>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
@@ -141,13 +173,17 @@ function Dashboard() {
                 <tr key={i} className="border-b border-border/20 hover:bg-white/5 transition">
                   <td className="py-4 text-primary font-medium">{u.time}</td>
                   <td className="flex items-center gap-3 py-4">
-                    <div className="w-8 h-8 rounded-full bg-surface-elevated grid place-items-center text-xs">{u.name[0]}</div>
+                    <div className="w-8 h-8 rounded-full bg-surface-elevated grid place-items-center text-xs">
+                      {u.name[0]}
+                    </div>
                     {u.name}
                   </td>
                   <td>{u.service}</td>
                   <td className="text-muted-foreground">{u.barber}</td>
                   <td className="text-right">
-                    <span className="inline-flex text-[10px] uppercase tracking-widest text-primary bg-gold-soft px-2 py-1 rounded">Confirmado</span>
+                    <span className="inline-flex text-[10px] uppercase tracking-widest text-primary bg-gold-soft px-2 py-1 rounded">
+                      Confirmado
+                    </span>
                   </td>
                 </tr>
               ))}

@@ -24,12 +24,20 @@ function Relatorios() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {reports.map((r) => (
-          <div key={r.name} className="glass rounded-xl p-6 hover:border-primary/40 transition group">
+          <div
+            key={r.name}
+            className="glass rounded-xl p-6 hover:border-primary/40 transition group"
+          >
             <div className="flex justify-between items-start mb-4">
-              <div className="w-12 h-12 rounded-lg bg-gold-soft grid place-items-center text-primary">
+              <div
+                className="w-12 h-12 rounded-lg bg-gold-soft grid place-items-center text
+                -primary"
+              >
                 <FileText className="w-5 h-5" />
               </div>
-              <span className="text-[10px] uppercase tracking-widest text-muted-foreground">{r.period}</span>
+              <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                {r.period}
+              </span>
             </div>
             <h3 className="font-display text-xl mb-2">{r.name}</h3>
             <p className="text-sm text-muted-foreground mb-6">{r.desc}</p>

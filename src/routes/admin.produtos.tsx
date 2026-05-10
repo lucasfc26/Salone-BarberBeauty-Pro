@@ -46,19 +46,31 @@ function Produtos() {
               <tr key={p.sku} className="border-b border-border/20 hover:bg-white/5 transition">
                 <td className="py-4 px-6">
                   <div className="flex items-center gap-3">
-                    <img src={p.img} alt={p.name} loading="lazy" className="w-12 h-12 rounded-md object-cover" />
+                    <img
+                      src={p.img}
+                      alt={p.name}
+                      loading="lazy"
+                      className="w-12 h-12 rounded-md object-cover"
+                    />
                     <div className="font-medium">{p.name}</div>
                   </div>
                 </td>
                 <td className="text-muted-foreground">{p.sku}</td>
                 <td>
-                  <span className={`inline-flex items-center gap-1 text-xs ${p.stock < 5 ? "text-rose-400" : "text-emerald-400"}`}>
-                    {p.stock < 5 && <AlertTriangle className="w-3 h-3" />}{p.stock} un
+                  <span
+                    className={`inline-flex items-center gap-1 text-xs ${p.stock < 5 ? "text-rose-400" : "text-emerald-400"}`}
+                  >
+                    {p.stock < 5 && <AlertTriangle className="w-3 h-3" />}
+                    {p.stock} un
                   </span>
                 </td>
                 <td className="text-muted-foreground">{p.sold}</td>
                 <td className="font-display text-primary">R$ {p.price}</td>
-                <td><button className="text-xs uppercase tracking-widest text-primary hover:underline">Editar</button></td>
+                <td>
+                  <button className="text-xs uppercase tracking-widest text-primary hover:underline">
+                    Editar
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
