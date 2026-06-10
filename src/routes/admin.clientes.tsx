@@ -29,7 +29,10 @@ function Clientes() {
 
       <div className="relative max-w-md">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-        <input placeholder="Buscar cliente..." className="w-full bg-surface hairline rounded-md pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-primary" />
+        <input
+          placeholder="Buscar cliente..."
+          className="w-full bg-surface hairline rounded-md pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-primary"
+        />
       </div>
 
       <div className="glass rounded-xl overflow-hidden">
@@ -49,22 +52,31 @@ function Clientes() {
               <tr key={c.name} className="border-b border-border/20 hover:bg-white/5 transition">
                 <td className="py-4 px-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full gradient-gold grid place-items-center text-primary-foreground font-bold text-xs">{c.name[0]}</div>
+                    <div className="w-10 h-10 rounded-full gradient-gold grid place-items-center text-primary-foreground font-bold text-xs">
+                      {c.name[0]}
+                    </div>
                     <div>
                       <div className="font-medium">{c.name}</div>
-                      <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Cashback R$ {(c.spent * 0.05).toFixed(0)}</div>
+                      <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                        Cashback R$ {(c.spent * 0.05).toFixed(0)}
+                      </div>
                     </div>
                   </div>
                 </td>
                 <td>
                   <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-widest text-primary bg-gold-soft px-2 py-1 rounded">
-                    <Star className="w-3 h-3 fill-primary" />{c.level}
+                    <Star className="w-3 h-3 fill-primary" />
+                    {c.level}
                   </span>
                 </td>
                 <td className="text-muted-foreground">{c.visits}</td>
                 <td className="text-muted-foreground">{c.last}</td>
                 <td className="font-display text-primary">R$ {c.spent.toLocaleString("pt-BR")}</td>
-                <td><button className="text-xs uppercase tracking-widest text-primary hover:underline">Ver</button></td>
+                <td>
+                  <button className="text-xs uppercase tracking-widest text-primary hover:underline">
+                    Ver
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>

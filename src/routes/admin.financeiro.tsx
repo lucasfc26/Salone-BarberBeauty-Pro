@@ -1,5 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDownRight, ArrowUpRight, CreditCard, Banknote, Smartphone, Repeat } from "lucide-react";
+import {
+  ArrowDownRight,
+  ArrowUpRight,
+  CreditCard,
+  Banknote,
+  Smartphone,
+  Repeat,
+} from "lucide-react";
 
 export const Route = createFileRoute("/admin/financeiro")({
   component: Financeiro,
@@ -24,13 +31,25 @@ function Financeiro() {
 
       <div className="grid sm:grid-cols-3 gap-4">
         {[
-          { label: "Entradas (Mês)", value: "R$ 62.480", icon: ArrowUpRight, color: "text-emerald-400" },
-          { label: "Saídas (Mês)", value: "R$ 14.280", icon: ArrowDownRight, color: "text-rose-400" },
+          {
+            label: "Entradas (Mês)",
+            value: "R$ 62.480",
+            icon: ArrowUpRight,
+            color: "text-emerald-400",
+          },
+          {
+            label: "Saídas (Mês)",
+            value: "R$ 14.280",
+            icon: ArrowDownRight,
+            color: "text-rose-400",
+          },
           { label: "Saldo", value: "R$ 48.200", icon: Banknote, color: "text-primary" },
         ].map((c) => (
           <div key={c.label} className="glass rounded-xl p-6">
             <div className="flex justify-between items-start mb-3">
-              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{c.label}</p>
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground">
+                {c.label}
+              </p>
               <c.icon className={`w-5 h-5 ${c.color}`} />
             </div>
             <div className="font-display text-3xl">{c.value}</div>
@@ -43,17 +62,30 @@ function Financeiro() {
           <h3 className="font-display text-2xl mb-6">Movimentações recentes</h3>
           <div className="space-y-1">
             {transactions.map((t, i) => (
-              <div key={i} className="flex items-center justify-between py-3 border-b border-border/20 last:border-0">
+              <div
+                key={i}
+                className="flex items-center justify-between py-3 border-b border-border/20 last:border-0"
+              >
                 <div className="flex items-center gap-4">
-                  <div className={`w-10 h-10 rounded-md grid place-items-center ${t.type === "in" ? "bg-emerald-500/10 text-emerald-400" : "bg-rose-500/10 text-rose-400"}`}>
-                    {t.type === "in" ? <ArrowUpRight className="w-4 h-4" /> : <ArrowDownRight className="w-4 h-4" />}
+                  <div
+                    className={`w-10 h-10 rounded-md grid place-items-center ${t.type === "in" ? "bg-emerald-500/10 text-emerald-400" : "bg-rose-500/10 text-rose-400"}`}
+                  >
+                    {t.type === "in" ? (
+                      <ArrowUpRight className="w-4 h-4" />
+                    ) : (
+                      <ArrowDownRight className="w-4 h-4" />
+                    )}
                   </div>
                   <div>
                     <div className="text-sm font-medium">{t.desc}</div>
-                    <div className="text-xs text-muted-foreground">{t.d} · {t.method}</div>
+                    <div className="text-xs text-muted-foreground">
+                      {t.d} · {t.method}
+                    </div>
                   </div>
                 </div>
-                <div className={`font-display text-lg ${t.type === "in" ? "text-emerald-400" : "text-rose-400"}`}>
+                <div
+                  className={`font-display text-lg ${t.type === "in" ? "text-emerald-400" : "text-rose-400"}`}
+                >
                   {t.value > 0 ? "+" : ""}R$ {Math.abs(t.value).toLocaleString("pt-BR")}
                 </div>
               </div>
@@ -72,7 +104,9 @@ function Financeiro() {
             ].map((m) => (
               <div key={m.name}>
                 <div className="flex justify-between text-sm mb-2">
-                  <span className="flex items-center gap-2"><m.icon className="w-4 h-4 text-primary" /> {m.name}</span>
+                  <span className="flex items-center gap-2">
+                    <m.icon className="w-4 h-4 text-primary" /> {m.name}
+                  </span>
                   <span className="text-primary">{m.pct}%</span>
                 </div>
                 <div className="h-1 bg-surface-elevated rounded-full overflow-hidden">

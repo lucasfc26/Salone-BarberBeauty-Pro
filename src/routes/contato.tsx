@@ -30,7 +30,7 @@ function Contato() {
 
         <div className="grid lg:grid-cols-3 gap-6 mb-16">
           {[
-            { icon: MapPin, title: "Endereço", value: "Av. Paulista, 1000 — São Paulo" },
+            { icon: MapPin, title: "Endereço", value: "Rua 53, 260 Pref. José Walter — Fortaleza" },
             { icon: Phone, title: "Telefone", value: "+55 (11) 99999-0000" },
             { icon: Mail, title: "E-mail", value: "contato@salone.app" },
           ].map((c) => (

@@ -1,1 +1,142 @@
-import{j as e}from"./index-BsAAwhZV.js";import{P as t}from"./plus-hmiC1hI8.js";import{c as i}from"./createLucideIcon-ExsDg67i.js";const n=[["path",{d:"M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978",key:"1n3hpd"}],["path",{d:"M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978",key:"rfe1zi"}],["path",{d:"M18 9h1.5a1 1 0 0 0 0-5H18",key:"7xy6bh"}],["path",{d:"M4 22h16",key:"57wxv0"}],["path",{d:"M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z",key:"1mhfuq"}],["path",{d:"M6 9H4.5a1 1 0 0 1 0-5H6",key:"tex48p"}]],o=i("trophy",n),l=[{name:"André Castelo",role:"Master Barber",status:"online",services:142,revenue:18200,commission:40,rating:4.9},{name:"Emanuelly Albuquerque",role:"Senior Barber",status:"online",services:98,revenue:12400,commission:40,rating:4.8},{name:"Josy Lira",role:"Nail Designer",status:"offline",services:85,revenue:10100,commission:20,rating:4.7}];function x(){return e.jsxs("div",{className:"space-y-6",children:[e.jsxs("div",{className:"flex items-end justify-between flex-wrap gap-4",children:[e.jsxs("div",{children:[e.jsx("p",{className:"text-xs uppercase tracking-[0.3em] text-primary mb-2",children:"Equipe"}),e.jsx("h1",{className:"font-display text-4xl md:text-5xl",children:"Profissionais"})]}),e.jsxs("button",{className:"bg-primary text-primary-foreground px-5 py-3 rounded-md text-xs uppercase tracking-widest font-semibold flex items-center gap-2 hover:brightness-110 transition shadow-gold",children:[e.jsx(t,{className:"w-4 h-4"})," Novo membro"]})]}),e.jsx("div",{className:"grid md:grid-cols-2 lg:grid-cols-4 gap-4",children:l.map((s,a)=>e.jsxs("div",{className:"glass rounded-xl p-6 hover:border-primary/40 transition relative",children:[a===0&&e.jsx("div",{className:"absolute -top-3 -right-3 w-9 h-9 rounded-full gradient-gold grid place-items-center shadow-gold",children:e.jsx(o,{className:"w-4 h-4 text-primary-foreground"})}),e.jsxs("div",{className:"flex items-center gap-3 mb-4",children:[e.jsxs("div",{className:"relative",children:[e.jsx("div",{className:"w-14 h-14 rounded-full gradient-gold grid place-items-center text-primary-foreground font-bold",children:s.name[0]}),e.jsx("span",{className:`absolute bottom-0 right-0 w-4 h-4 rounded-full border-2 border-background ${s.status==="online"?"bg-emerald-400":"bg-muted-foreground"}`})]}),e.jsxs("div",{children:[e.jsx("div",{className:"font-display text-lg",children:s.name}),e.jsx("div",{className:"text-[10px] uppercase tracking-widest text-muted-foreground",children:s.role})]})]}),e.jsxs("div",{className:"space-y-2 text-sm",children:[e.jsx(r,{label:"Serviços",value:`${s.services}`}),e.jsx(r,{label:"Faturamento",value:`R$ ${s.revenue.toLocaleString("pt-BR")}`}),e.jsx(r,{label:"Comissão",value:`${s.commission}%`}),e.jsx(r,{label:"Avaliação",value:`★ ${s.rating}`})]})]},s.name))})]})}function r({label:s,value:a}){return e.jsxs("div",{className:"flex justify-between border-b border-border/20 pb-2 last:border-0",children:[e.jsx("span",{className:"text-[10px] uppercase tracking-widest text-muted-foreground",children:s}),e.jsx("span",{className:"text-primary",children:a})]})}export{x as component};
+import { j as e } from "./index-BsAAwhZV.js";
+import { P as t } from "./plus-hmiC1hI8.js";
+import { c as i } from "./createLucideIcon-ExsDg67i.js";
+const n = [
+    ["path", { d: "M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978", key: "1n3hpd" }],
+    ["path", { d: "M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978", key: "rfe1zi" }],
+    ["path", { d: "M18 9h1.5a1 1 0 0 0 0-5H18", key: "7xy6bh" }],
+    ["path", { d: "M4 22h16", key: "57wxv0" }],
+    ["path", { d: "M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z", key: "1mhfuq" }],
+    ["path", { d: "M6 9H4.5a1 1 0 0 1 0-5H6", key: "tex48p" }],
+  ],
+  o = i("trophy", n),
+  l = [
+    {
+      name: "André Castelo",
+      role: "Master Barber",
+      status: "online",
+      services: 142,
+      revenue: 18200,
+      commission: 40,
+      rating: 4.9,
+    },
+    {
+      name: "Emanuelly Albuquerque",
+      role: "Senior Barber",
+      status: "online",
+      services: 98,
+      revenue: 12400,
+      commission: 40,
+      rating: 4.8,
+    },
+    {
+      name: "Josy Lira",
+      role: "Nail Designer",
+      status: "offline",
+      services: 85,
+      revenue: 10100,
+      commission: 20,
+      rating: 4.7,
+    },
+  ];
+function x() {
+  return e.jsxs("div", {
+    className: "space-y-6",
+    children: [
+      e.jsxs("div", {
+        className: "flex items-end justify-between flex-wrap gap-4",
+        children: [
+          e.jsxs("div", {
+            children: [
+              e.jsx("p", {
+                className: "text-xs uppercase tracking-[0.3em] text-primary mb-2",
+                children: "Equipe",
+              }),
+              e.jsx("h1", {
+                className: "font-display text-4xl md:text-5xl",
+                children: "Profissionais",
+              }),
+            ],
+          }),
+          e.jsxs("button", {
+            className:
+              "bg-primary text-primary-foreground px-5 py-3 rounded-md text-xs uppercase tracking-widest font-semibold flex items-center gap-2 hover:brightness-110 transition shadow-gold",
+            children: [e.jsx(t, { className: "w-4 h-4" }), " Novo membro"],
+          }),
+        ],
+      }),
+      e.jsx("div", {
+        className: "grid md:grid-cols-2 lg:grid-cols-4 gap-4",
+        children: l.map((s, a) =>
+          e.jsxs(
+            "div",
+            {
+              className: "glass rounded-xl p-6 hover:border-primary/40 transition relative",
+              children: [
+                a === 0 &&
+                  e.jsx("div", {
+                    className:
+                      "absolute -top-3 -right-3 w-9 h-9 rounded-full gradient-gold grid place-items-center shadow-gold",
+                    children: e.jsx(o, { className: "w-4 h-4 text-primary-foreground" }),
+                  }),
+                e.jsxs("div", {
+                  className: "flex items-center gap-3 mb-4",
+                  children: [
+                    e.jsxs("div", {
+                      className: "relative",
+                      children: [
+                        e.jsx("div", {
+                          className:
+                            "w-14 h-14 rounded-full gradient-gold grid place-items-center text-primary-foreground font-bold",
+                          children: s.name[0],
+                        }),
+                        e.jsx("span", {
+                          className: `absolute bottom-0 right-0 w-4 h-4 rounded-full border-2 border-background ${s.status === "online" ? "bg-emerald-400" : "bg-muted-foreground"}`,
+                        }),
+                      ],
+                    }),
+                    e.jsxs("div", {
+                      children: [
+                        e.jsx("div", { className: "font-display text-lg", children: s.name }),
+                        e.jsx("div", {
+                          className: "text-[10px] uppercase tracking-widest text-muted-foreground",
+                          children: s.role,
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                e.jsxs("div", {
+                  className: "space-y-2 text-sm",
+                  children: [
+                    e.jsx(r, { label: "Serviços", value: `${s.services}` }),
+                    e.jsx(r, {
+                      label: "Faturamento",
+                      value: `R$ ${s.revenue.toLocaleString("pt-BR")}`,
+                    }),
+                    e.jsx(r, { label: "Comissão", value: `${s.commission}%` }),
+                    e.jsx(r, { label: "Avaliação", value: `★ ${s.rating}` }),
+                  ],
+                }),
+              ],
+            },
+            s.name,
+          ),
+        ),
+      }),
+    ],
+  });
+}
+function r({ label: s, value: a }) {
+  return e.jsxs("div", {
+    className: "flex justify-between border-b border-border/20 pb-2 last:border-0",
+    children: [
+      e.jsx("span", {
+        className: "text-[10px] uppercase tracking-widest text-muted-foreground",
+        children: s,
+      }),
+      e.jsx("span", { className: "text-primary", children: a }),
+    ],
+  });
+}
+export { x as component };

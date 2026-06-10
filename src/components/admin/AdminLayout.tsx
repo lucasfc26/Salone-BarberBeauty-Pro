@@ -39,7 +39,7 @@ export function AdminLayout() {
             <Scissors className="w-5 h-5 text-primary-foreground" />
           </div>
           <div>
-            <div className="font-display text-xl text-primary leading-none">Salone</div>
+            <div className="font-display text-xl text-white leading-none font-bold">SALONE</div>
             <div className="text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
               Admin Console
             </div>
@@ -59,7 +59,7 @@ export function AdminLayout() {
             return (
               <Link
                 key={it.to}
-                to={it.to as any}
+                to={it.to as string}
                 onClick={() => setOpen(false)}
                 className={`flex items-center gap-3 px-4 py-2.5 rounded-md text-sm transition ${
                   active
